@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.5.2",
+  "repository": {
+    "url": "github:baka-gourd/satteri-plugins",
+    "type": "git"
+  },
   "scripts": {
     "build": "pnpm -r build",
     "check": "pnpm -r check",
