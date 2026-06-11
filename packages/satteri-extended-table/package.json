@@ -1,6 +1,6 @@
 {
-  "name": "satteri-extended-table",
-  "version": "0.0.0",
+  "name": "@nullpinter/satteri-extended-table",
+  "version": "0.1.0",
   "type": "module",
   "description": "Satteri plugin for extended table colspan and rowspan syntax",
   "license": "MPL-2.0",
@@ -32,5 +32,9 @@
   },
   "devDependencies": {
     "satteri": "^0.8.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
