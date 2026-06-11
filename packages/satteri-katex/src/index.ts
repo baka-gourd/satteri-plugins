@@ -41,13 +41,11 @@ function renderMath(
   const value = node.value;
 
   try {
-    return {
-      rawHtml: katexLib.renderToString(value, {
-        ...options,
-        displayMode,
-        throwOnError: true,
-      }),
-    };
+    return katexLib.renderToString(value, {
+      ...options,
+      displayMode,
+      throwOnError: true,
+    });
   } catch (error) {
     const cause = error instanceof Error ? error : new Error(String(error));
 
@@ -58,18 +56,14 @@ function renderMath(
     });
 
     try {
-      return {
-        rawHtml: katexLib.renderToString(value, {
-          ...options,
-          displayMode,
-          strict: "ignore",
-          throwOnError: false,
-        }),
-      };
+      return katexLib.renderToString(value, {
+        ...options,
+        displayMode,
+        strict: "ignore",
+        throwOnError: false,
+      });
     } catch {
-      return {
-        rawHtml: renderKatexError(value, error, options),
-      };
+      return renderKatexError(value, error, options);
     }
   }
 }
@@ -80,10 +74,10 @@ export function katex(options?: Readonly<KatexOptions>): MdastPluginDefinition {
   return defineMdastPlugin({
     name: "katex",
     math(node, ctx) {
-      return renderMath(node, true, settings, ctx);
+      return { rawHtml: renderMath(node, true, settings, ctx) };
     },
     inlineMath(node, ctx) {
-      return renderMath(node, false, settings, ctx);
+      return { type: "html", value: renderMath(node, false, settings, ctx) };
     },
   });
 }

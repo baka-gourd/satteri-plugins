@@ -25,6 +25,9 @@ test("renders inline math without display mode", async () => {
   expect(result).toContain('class="katex"');
   expect(result).not.toContain("katex-display");
   expect(result).toContain(katexLib.renderToString("x^2"));
+  expect(result).toContain("Before ");
+  expect(result).toContain(" after.");
+  expect(result).not.toContain("</p><p>");
 });
 
 test("supports KaTeX macros", async () => {
@@ -108,7 +111,7 @@ test("escapes manual error markup", async () => {
     expect(result).toContain('class="katex-error"');
     expect(result).toContain('style="color:&quot;red&quot;&amp;"');
     expect(result).toContain('title="Error: &quot;broken&quot; &lt;math&gt;"');
-    expect(result).toContain("&lt;script&gt;&amp;\"");
+    expect(result).toContain("&lt;script&gt;&amp;&quot;");
     expect(result).not.toContain("<script>");
   } finally {
     renderSpy.mockRestore();
