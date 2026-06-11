@@ -33,6 +33,12 @@ importers:
         specifier: ^4.1.8
         version: 4.1.8(@types/node@25.9.2)(vite@8.0.16(@types/node@25.9.2))
 
+  packages/satteri-admonitions-to-directives:
+    devDependencies:
+      satteri:
+        specifier: ^0.8.1
+        version: 0.8.1
+
   packages/satteri-extended-table:
     dependencies:
       hast-util-to-html:

@@ -1,0 +1,42 @@
+{
+	"name": "@nullpinter/satteri-admonitions-to-directives",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Satteri plugin for converting GitHub alert blockquotes to directive nodes",
+	"license": "MPL-2.0",
+	"repository": {
+		"url": "github:baka-gourd/satteri-plugins",
+		"type": "git",
+		"directory": "packages/satteri-admonitions-to-directives"
+	},
+	"keywords": [
+		"markdown",
+		"mdx",
+		"satteri",
+		"satteri-plugin"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"check": "tsc -p tsconfig.json --noEmit",
+		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"satteri": "^0.8.1"
+	},
+	"devDependencies": {
+		"satteri": "^0.8.1"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	}
+}
