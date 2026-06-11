@@ -1,6 +1,6 @@
 {
     "name": "@nullpinter/satteri-katex",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "type": "module",
     "description": "Satteri plugin scaffold for KaTeX support",
     "license": "MPL-2.0",
