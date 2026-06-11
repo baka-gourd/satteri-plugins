@@ -1,6 +1,6 @@
 {
 	"name": "@nullpinter/satteri-admonitions-to-directives",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"type": "module",
 	"description": "Satteri plugin for converting GitHub alert blockquotes to directive nodes",
 	"license": "MPL-2.0",
