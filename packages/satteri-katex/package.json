@@ -1,0 +1,52 @@
+{
+    "name": "@nullpinter/satteri-katex",
+    "version": "0.0.0",
+    "type": "module",
+    "description": "Satteri plugin scaffold for KaTeX support",
+    "license": "MPL-2.0",
+    "repository": {
+        "url": "github:baka-gourd/satteri-plugins",
+        "type": "git",
+        "directory": "packages/satteri-katex"
+    },
+    "keywords": [
+        "markdown",
+        "mdx",
+        "satteri",
+        "satteri-plugin",
+        "katex",
+        "math"
+    ],
+    "homepage": "https://github.com/baka-gourd/satteri-plugins",
+    "bugs": {
+        "url": "https://github.com/baka-gourd/satteri-plugins/issues"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.mts",
+            "import": "./dist/index.mjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsdown",
+        "check": "tsc -p tsconfig.json --noEmit",
+        "test": "vitest run"
+    },
+    "peerDependencies": {
+        "satteri": "^0.8.1"
+    },
+    "devDependencies": {
+        "@types/katex": "^0.16.8",
+        "satteri": "^0.8.1"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "dependencies": {
+        "katex": "^0.17.0"
+    }
+}

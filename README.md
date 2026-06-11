@@ -7,6 +7,7 @@ Temporary workspace for Satteri plugin packages.
 - `satteri-extended-table`: extended table rowspan and colspan support for Satteri.
 - `satteri-admonitions-to-directives`: converts GitHub alert blockquotes to
   directive nodes for Satteri.
+- `satteri-katex`: package scaffold for KaTeX support in Satteri.
 
 ## Development
 
