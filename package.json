@@ -1,0 +1,21 @@
+{
+  "name": "satteri-plugins-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.5.2",
+  "scripts": {
+    "build": "pnpm -r build",
+    "check": "pnpm -r check",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "oxfmt": "^0.54.0",
+    "oxlint": "^1.69.0",
+    "oxlint-tsgolint": "^0.23.0",
+    "satteri": "^0.8.1",
+    "tsdown": "^0.22.2",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}
