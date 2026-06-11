@@ -1,0 +1,94 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - "@*/*@*"
+      - "*@*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish package
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve package from tag
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          PACKAGE_NAME="${TAG_NAME%@*}"
+          PACKAGE_VERSION="${TAG_NAME##*@}"
+
+          if [ -z "$PACKAGE_NAME" ] || [ -z "$PACKAGE_VERSION" ] || [ "$PACKAGE_NAME" = "$TAG_NAME" ]; then
+            echo "Invalid tag: $TAG_NAME"
+            exit 1
+          fi
+
+          if ! node -e "process.exit(/^\d+\.\d+\.\d+(?:-[0-9A-Za-z-.]+)?(?:\+[0-9A-Za-z-.]+)?$/.test(process.argv[1]) ? 0 : 1)" "$PACKAGE_VERSION"; then
+            echo "Invalid semver: $PACKAGE_VERSION"
+            exit 1
+          fi
+
+          {
+            echo "PACKAGE_NAME=$PACKAGE_NAME"
+            echo "PACKAGE_VERSION=$PACKAGE_VERSION"
+          } >> "$GITHUB_ENV"
+
+      - name: Verify package version
+        run: |
+          ACTUAL_VERSION="$(
+            pnpm --filter "$PACKAGE_NAME" --fail-if-no-match exec node -p "require('./package.json').version"
+          )"
+
+          if [ "$ACTUAL_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "Tag version mismatch."
+            echo "Tag:          $PACKAGE_NAME@$PACKAGE_VERSION"
+            echo "package.json: $PACKAGE_NAME@$ACTUAL_VERSION"
+            exit 1
+          fi
+
+      - name: Check
+        run: pnpm --filter "$PACKAGE_NAME" --fail-if-no-match check
+
+      - name: Test
+        run: pnpm --filter "$PACKAGE_NAME" --fail-if-no-match test
+
+      - name: Build
+        run: pnpm --filter "$PACKAGE_NAME" --fail-if-no-match build
+
+      - name: Publish dry run
+        run: |
+          pnpm publish \
+            --filter "$PACKAGE_NAME" \
+            --fail-if-no-match \
+            --dry-run \
+            --access public \
+            --no-git-checks
+
+      - name: Publish
+        run: |
+          pnpm publish \
+            --filter "$PACKAGE_NAME" \
+            --fail-if-no-match \
+            --access public \
+            --provenance \
+            --no-git-checks
