@@ -1,0 +1,7 @@
+# @nullpinter/satteri-admonitions-to-directives
+
+## 0.1.2
+
+### Patch Changes
+
+- cceaa96: update metadatas
