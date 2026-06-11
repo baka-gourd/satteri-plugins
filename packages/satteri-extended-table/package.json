@@ -1,0 +1,36 @@
+{
+  "name": "satteri-extended-table",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Satteri plugin for extended table colspan and rowspan syntax",
+  "license": "MPL-2.0",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "satteri": "^0.8.1"
+  },
+  "dependencies": {
+    "hast-util-to-html": "^9.0.5",
+    "mdast-util-extended-table": "^2.0.3",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-gfm-table": "^2.0.0",
+    "mdast-util-to-hast": "^13.2.1",
+    "micromark-extension-extended-table": "^2.0.3",
+    "micromark-extension-gfm-table": "^2.1.1"
+  },
+  "devDependencies": {
+    "satteri": "^0.8.1"
+  }
+}
