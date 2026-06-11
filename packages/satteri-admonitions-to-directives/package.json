@@ -15,6 +15,10 @@
 		"satteri",
 		"satteri-plugin"
 	],
+	"homepage": "https://github.com/baka-gourd/satteri-plugins",
+	"bugs": {
+		"url": "https://github.com/baka-gourd/satteri-plugins/issues"
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.mts",

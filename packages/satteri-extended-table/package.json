@@ -4,6 +4,21 @@
   "type": "module",
   "description": "Satteri plugin for extended table colspan and rowspan syntax",
   "license": "MPL-2.0",
+  "keywords": [
+    "markdown",
+    "mdx",
+    "satteri",
+    "satteri-plugin"
+  ],
+  "repository": {
+    "url": "github:baka-gourd/satteri-plugins",
+    "type": "git",
+    "directory": "packages/satteri-extended-table"
+  },
+  "homepage": "https://github.com/baka-gourd/satteri-plugins",
+  "bugs": {
+    "url": "https://github.com/baka-gourd/satteri-plugins/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
