@@ -8,5 +8,7 @@ const packages = readdirSync(resolve(rootDir, "packages"));
 export default {
 	prompt: {
 		scopes: [...packages],
+		enableMultipleScopes: true,
+		scopeEnumSeparator: ","
 	},
 };
