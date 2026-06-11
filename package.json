@@ -13,7 +13,7 @@
     "test": "pnpm -r test",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "ci:publish": "pnpm -r --workspace-concurrency=1 publish --access public --provenance --no-git-checks"
+    "ci:publish": "pnpm -r publish --provenance --no-git-checks"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
