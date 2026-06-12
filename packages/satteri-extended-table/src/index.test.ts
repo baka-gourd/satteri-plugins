@@ -3,11 +3,11 @@ import { markdownToHtml } from "satteri";
 import { extendedTable, type ExtendedTableOptions } from "./index.js";
 
 const process = async (md: string, options?: ExtendedTableOptions) => {
-	const result = await markdownToHtml(md, {
-		features: { gfm: true },
-		mdastPlugins: [extendedTable(options)],
-	});
-	return result.html.trim();
+  const result = await markdownToHtml(md, {
+    features: { gfm: true },
+    mdastPlugins: [extendedTable(options)],
+  });
+  return result.html.trim();
 };
 
 test("simple rowspan", async () => {
@@ -34,7 +34,7 @@ test("simple rowspan", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("simple colspan", async () => {
@@ -61,7 +61,7 @@ test("simple colspan", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("span in header", async () => {
@@ -88,7 +88,7 @@ test("span in header", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("marker at end", async () => {
@@ -116,7 +116,7 @@ test("marker at end", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("combined spans", async () => {
@@ -153,7 +153,7 @@ test("combined spans", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("span with empty cell", async () => {
@@ -180,7 +180,7 @@ test("span with empty cell", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md, { colspanWithEmpty: true })).toBe(html);
+  expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });
 
 test("no span with empty cell", async () => {
@@ -208,7 +208,7 @@ test("no span with empty cell", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("cell sandwiched between colspan markers", async () => {
@@ -237,7 +237,7 @@ test("cell sandwiched between colspan markers", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md, { colspanWithEmpty: true })).toBe(html);
+  expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });
 
 test("align", async () => {
@@ -272,7 +272,7 @@ test("align", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md, { colspanWithEmpty: true })).toBe(html);
+  expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });
 
 test("edge case: empty cell merged with below cell", async () => {
@@ -304,7 +304,7 @@ a | b
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md)).toBe(html);
+  expect(await process(md)).toBe(html);
 });
 
 test("edge case: conflict between colspanWithRight and colspanWithLeft", async () => {
@@ -330,7 +330,7 @@ test("edge case: conflict between colspanWithRight and colspanWithLeft", async (
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md, { colspanWithEmpty: true })).toBe(html);
+  expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });
 
 test("regression: more than 2 colspanWithRight is not working", async () => {
@@ -353,7 +353,7 @@ test("regression: more than 2 colspanWithRight is not working", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md, { colspanWithEmpty: true })).toBe(html);
+  expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });
 
 test("too many cells in a row", async () => {
@@ -385,5 +385,5 @@ test("too many cells in a row", async () => {
 </tr>
 </tbody>
 </table>`;
-	expect(await process(md, { colspanWithEmpty: true })).toBe(html);
+  expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });

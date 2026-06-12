@@ -15,7 +15,7 @@ import { markdownToHtml } from "satteri";
 import { katex } from "@nullpinter/satteri-katex";
 
 const result = await markdownToHtml(markdown, {
- mdastPlugins: [katex()],
+  mdastPlugins: [katex()],
 });
 
 console.log(result.html);

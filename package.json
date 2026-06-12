@@ -1,12 +1,11 @@
 {
   "name": "satteri-plugins-workspace",
   "private": true,
-  "type": "module",
-  "packageManager": "pnpm@11.5.2",
   "repository": {
-    "url": "github:baka-gourd/satteri-plugins",
-    "type": "git"
+    "type": "git",
+    "url": "github:baka-gourd/satteri-plugins"
   },
+  "type": "module",
   "scripts": {
     "build": "pnpm -r build",
     "check": "pnpm -r check",
@@ -25,5 +24,6 @@
     "tsdown": "^0.22.2",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8"
-  }
+  },
+  "packageManager": "pnpm@11.5.2"
 }

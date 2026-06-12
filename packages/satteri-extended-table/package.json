@@ -1,40 +1,41 @@
 {
   "name": "@nullpinter/satteri-extended-table",
   "version": "0.1.2",
-  "type": "module",
   "description": "Satteri plugin for extended table colspan and rowspan syntax",
-  "license": "MPL-2.0",
   "keywords": [
     "markdown",
     "mdx",
     "satteri",
     "satteri-plugin"
   ],
-  "repository": {
-    "url": "github:baka-gourd/satteri-plugins",
-    "type": "git",
-    "directory": "packages/satteri-extended-table"
-  },
   "homepage": "https://github.com/baka-gourd/satteri-plugins",
   "bugs": {
     "url": "https://github.com/baka-gourd/satteri-plugins/issues"
   },
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "github:baka-gourd/satteri-plugins",
+    "directory": "packages/satteri-extended-table"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "tsdown",
     "check": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run"
-  },
-  "peerDependencies": {
-    "satteri": "^0.8.1"
   },
   "dependencies": {
     "hast-util-to-html": "^9.0.5",
@@ -48,8 +49,7 @@
   "devDependencies": {
     "satteri": "^0.8.1"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+  "peerDependencies": {
+    "satteri": "^0.8.1"
   }
 }

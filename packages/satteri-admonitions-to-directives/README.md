@@ -23,7 +23,7 @@ import { markdownToHtml } from "satteri";
 import { admonitionsToDirectives } from "@nullpinter/satteri-admonitions-to-directives";
 
 const result = markdownToHtml(markdown, {
- mdastPlugins: [admonitionsToDirectives()],
+  mdastPlugins: [admonitionsToDirectives()],
 });
 ```
 
@@ -33,12 +33,12 @@ Pass `mapping` to customize directive names:
 
 ```ts
 admonitionsToDirectives({
- mapping: {
-  NOTE: "note",
-  TIP: "tip",
-  IMPORTANT: "info",
-  WARNING: "warning",
-  CAUTION: "danger",
- },
+  mapping: {
+    NOTE: "note",
+    TIP: "tip",
+    IMPORTANT: "info",
+    WARNING: "warning",
+    CAUTION: "danger",
+  },
 });
 ```

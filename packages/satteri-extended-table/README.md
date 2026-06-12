@@ -18,8 +18,8 @@ import { markdownToHtml } from "satteri";
 import { extendedTable } from "satteri-extended-table";
 
 const result = await markdownToHtml(markdown, {
- features: { gfm: true },
- mdastPlugins: [extendedTable({ colspanWithEmpty: true })],
+  features: { gfm: true },
+  mdastPlugins: [extendedTable({ colspanWithEmpty: true })],
 });
 
 console.log(result.html);
@@ -36,31 +36,31 @@ The plugin follows `remark-extended-table` semantics:
 Example:
 
 ```md
-| a | b |
-|---|---|
-| 1 | 2 |
-| ^ | 3 |
+| a   | b   |
+| --- | --- |
+| 1   | 2   |
+| ^   | 3   |
 ```
 
 Output:
 
 ```html
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2">1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

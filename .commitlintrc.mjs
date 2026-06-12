@@ -6,9 +6,9 @@ const rootDir = dirname(fileURLToPath(import.meta.url));
 const packages = readdirSync(resolve(rootDir, "packages"));
 
 export default {
-	prompt: {
-		scopes: [...packages],
-		enableMultipleScopes: true,
-		scopeEnumSeparator: ","
-	},
+  prompt: {
+    scopes: [...packages],
+    enableMultipleScopes: true,
+    scopeEnumSeparator: ",",
+  },
 };

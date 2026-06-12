@@ -106,7 +106,7 @@ test("escapes manual error markup", async () => {
   });
 
   try {
-    const result = await process("$<script>&\"$", { errorColor: '"red"&' });
+    const result = await process('$<script>&"$', { errorColor: '"red"&' });
 
     expect(result).toContain('class="katex-error"');
     expect(result).toContain('style="color:&quot;red&quot;&amp;"');
