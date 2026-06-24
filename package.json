@@ -16,14 +16,14 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
-    "@types/node": "^25.9.2",
-    "oxfmt": "^0.54.0",
-    "oxlint": "^1.69.0",
+    "@types/node": "^26.0.0",
+    "oxfmt": "^0.56.0",
+    "oxlint": "^1.71.0",
     "oxlint-tsgolint": "^0.23.0",
-    "satteri": "^0.8.1",
-    "tsdown": "^0.22.2",
+    "satteri": "^0.9.2",
+    "tsdown": "^0.22.3",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.9"
   },
-  "packageManager": "pnpm@11.5.2"
+  "packageManager": "pnpm@11.8.0"
 }

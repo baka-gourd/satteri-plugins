@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@types/katex": "^0.16.8",
-    "satteri": "^0.8.1"
+    "satteri": "^0.9.2"
   },
   "peerDependencies": {
     "satteri": "^0.8.1"
