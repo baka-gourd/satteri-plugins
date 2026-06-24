@@ -387,3 +387,35 @@ test("too many cells in a row", async () => {
 </table>`;
   expect(await process(md, { colspanWithEmpty: true })).toBe(html);
 });
+
+test("uses UTF-8 byte offsets when slicing a table", async () => {
+  const md = `中文前言
+
+| a | b |
+|---|---|
+| 1 | 2 |
+
+After
+
+![image](./image.png)
+`;
+  const html = `<p>中文前言</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>After</p>
+<p><img src="./image.png" alt="image"></p>`;
+
+  expect(await process(md)).toBe(html);
+});

@@ -19,7 +19,11 @@ function sliceSource(source: string, node: TableNode) {
   if (!node.position) {
     return undefined;
   }
-  return source.slice(node.position.start.offset, node.position.end.offset);
+
+  const bytes = new TextEncoder().encode(source);
+  return new TextDecoder().decode(
+    bytes.subarray(node.position.start.offset, node.position.end.offset),
+  );
 }
 
 function renderExtendedTable(markdown: string, options?: ExtendedTableOptions) {
