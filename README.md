@@ -8,6 +8,7 @@ Temporary workspace for Satteri plugin packages.
 - `satteri-admonitions-to-directives`: converts GitHub alert blockquotes to
   directive nodes for Satteri.
 - `satteri-katex`: package scaffold for KaTeX support in Satteri.
+- `satteri-sectionize`: wraps heading sections in `<section>` elements.
 
 ## Development
 
