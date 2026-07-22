@@ -10,6 +10,12 @@ Temporary workspace for Satteri plugin packages.
 - `satteri-katex`: package scaffold for KaTeX support in Satteri.
 - `satteri-sectionize`: wraps heading sections in `<section>` elements.
 
+> [!WARNING]
+> Satteri is still in early development, and the plugin API is not stable.
+>
+> Urrently, sectionize will cause footnotes generation failed.
+> katex not works fine in MDX, wait satteri update to fix it.
+
 ## Development
 
 Install dependencies:
