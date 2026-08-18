@@ -74,7 +74,7 @@ test("does not crash on non-parse errors", async () => {
   const result = await process(`$$\n${value}$$`);
 
   expect(result).toContain('class="katex-error"');
-  expect(result).toContain("Expected node of type textord");
+  expect(result).toContain('title="ParseError: KaTeX parse error:');
   expect(result).toContain("\\begin");
 });
 
