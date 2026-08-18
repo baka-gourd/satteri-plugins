@@ -1,5 +1,12 @@
 # @nullpinter/satteri-extended-table
 
+## 0.1.5
+
+### Patch Changes
+
+- e8a43c3: bump satteri version
+- 06ba93e: adapt table plugin to new API
+
 ## 0.1.4
 
 ### Patch Changes
