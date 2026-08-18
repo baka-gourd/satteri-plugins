@@ -20,10 +20,7 @@ function sliceSource(source: string, node: TableNode) {
     return undefined;
   }
 
-  const bytes = new TextEncoder().encode(source);
-  return new TextDecoder().decode(
-    bytes.subarray(node.position.start.offset, node.position.end.offset),
-  );
+  return source.slice(node.position.start.offset, node.position.end.offset);
 }
 
 function renderExtendedTable(markdown: string, options?: ExtendedTableOptions) {
@@ -49,6 +46,7 @@ function renderExtendedTable(markdown: string, options?: ExtendedTableOptions) {
 export function extendedTable(options?: ExtendedTableOptions): MdastPluginDefinition {
   return defineMdastPlugin({
     name: "extended-table",
+    options: { position: true },
     table(node, ctx) {
       const markdown = sliceSource(ctx.source, node);
       if (!markdown) {
