@@ -1,6 +1,6 @@
 {
   "name": "@nullpinter/satteri-sectionize",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Satteri plugin for wrapping heading sections in section elements",
   "keywords": [
     "markdown",
