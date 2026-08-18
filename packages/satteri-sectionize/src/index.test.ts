@@ -168,7 +168,7 @@ test("stores section heading depth in node data", async () => {
 
   const collectDepths = defineMdastPlugin({
     name: "collect-section-depths",
-    containerDirective(node) {
+    custom(node) {
       if (isSectionNode(node)) {
         depths.push(node.data.depth);
       }

@@ -16,8 +16,8 @@ const result = await markdownToHtml(markdown, {
 The plugin mirrors `remark-sectionize`: headings are wrapped together with the
 following sibling nodes until the next heading at the same or a higher level.
 
-It requires Satteri 0.9.2. The implementation uses the parent and sibling index
-APIs introduced in Satteri 0.9.0.
+It requires Satteri 0.10.0. The implementation uses the parent and sibling index
+APIs introduced in Satteri 0.9.0 and custom nodes introduced in Satteri 0.10.0.
 
 ## Options
 
@@ -35,13 +35,11 @@ the preceding section, matching `remark-sectionize`.
 
 ## Generated nodes
 
-Satteri cannot encode custom MDAST node types, so generated sections use
-`containerDirective` nodes with this shape:
+Generated sections use Satteri custom nodes with this shape:
 
 ```ts
 {
-  type: "containerDirective",
-  name: "section",
+  type: "section",
   data: {
     hName: "section",
     depth: 2,
@@ -51,8 +49,9 @@ Satteri cannot encode custom MDAST node types, so generated sections use
 ```
 
 `data.hName` renders the node as `<section>`, while `data.depth` records the
-heading depth that opened it. The implementation does not use blockquote nodes,
-so plugins that visit blockquotes will only receive actual Markdown quotes.
+heading depth that opened it. The implementation does not use directive or
+blockquote nodes, so plugins that visit either kind will only receive actual
+source nodes.
 
 ## Plugin order
 
@@ -63,9 +62,8 @@ Plugins that consume the generated section containers should run after it:
 mdastPlugins: [rewriteHeadings(), sectionize(), consumeSections()]
 ```
 
-Later plugins can identify generated sections by checking both
-`node.type === "containerDirective"` and `node.name === "section"`, or use the
-exported type guard:
+Later plugins can identify generated sections by checking `node.type ===
+"section"`, or use the exported type guard:
 
 ```ts
 import { isSectionNode } from "@nullpinter/satteri-sectionize";
