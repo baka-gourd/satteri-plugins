@@ -1,5 +1,11 @@
 # @nullpinter/satteri-admonitions-to-directives
 
+## 0.1.5
+
+### Patch Changes
+
+- 17e16d0: update satteri version
+
 ## 0.1.4
 
 ### Patch Changes

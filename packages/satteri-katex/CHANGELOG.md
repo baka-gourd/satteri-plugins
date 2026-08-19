@@ -1,5 +1,11 @@
 # @nullpinter/satteri-katex
 
+## 0.1.4
+
+### Patch Changes
+
+- 17e16d0: update satteri version
+
 ## 0.1.3
 
 ### Patch Changes
