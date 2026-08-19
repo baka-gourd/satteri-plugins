@@ -47,6 +47,6 @@
     "satteri": "^0.10.0"
   },
   "peerDependencies": {
-    "satteri": "^0.8.1"
+    "satteri": "^0.10.0"
   }
 }
