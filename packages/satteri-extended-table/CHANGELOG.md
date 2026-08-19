@@ -1,5 +1,11 @@
 # @nullpinter/satteri-extended-table
 
+## 0.1.6
+
+### Patch Changes
+
+- 17e16d0: update satteri version
+
 ## 0.1.5
 
 ### Patch Changes

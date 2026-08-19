@@ -1,6 +1,6 @@
 {
   "name": "@nullpinter/satteri-katex",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Satteri plugin scaffold for KaTeX support",
   "keywords": [
     "katex",
