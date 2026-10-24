@@ -1,6 +1,7 @@
 import katexLib from "katex";
 import { expect, test, vi } from "vitest";
-import { markdownToHtml } from "satteri";
+import { evaluate, markdownToHtml, type EvaluateOptions } from "satteri";
+import * as JSX from "@kitajs/html/jsx-runtime";
 import { katex, type KatexOptions } from "./index.js";
 
 const process = async (markdown: string, options?: KatexOptions) => {
@@ -111,9 +112,41 @@ test("escapes manual error markup", async () => {
     expect(result).toContain('class="katex-error"');
     expect(result).toContain('style="color:&quot;red&quot;&amp;"');
     expect(result).toContain('title="Error: &quot;broken&quot; &lt;math&gt;"');
-    expect(result).toContain("&lt;script&gt;&amp;&quot;");
+    expect(result).toContain('&lt;script&gt;&amp;"');
     expect(result).not.toContain("<script>");
   } finally {
     renderSpy.mockRestore();
   }
+});
+
+const processMdx = async (markdown: string, options?: KatexOptions) => {
+  const result = (await evaluate(markdown, {
+    features: { math: true },
+    mdastPlugins: [katex(options)],
+    Fragment: JSX.Fragment,
+    jsx: JSX.jsx as EvaluateOptions["jsx"],
+    jsxs: JSX.jsxs as EvaluateOptions["jsxs"],
+  })) as { default: () => string };
+
+  return result.default();
+};
+
+test("renders inline math in MDX", async () => {
+  const result = await processMdx("Before $x^2$ after.");
+
+  expect(result).toContain('class="katex"');
+  expect(result).not.toContain("katex-display");
+  expect(result).toContain(katexLib.renderToString("x^2"));
+  expect(result).toContain("Before ");
+  expect(result).toContain(" after.");
+  expect(result).not.toContain("</p><p>");
+});
+
+test("renders display math in MDX", async () => {
+  const result = await processMdx("$$\nx^2\n$$");
+
+  expect(result).toContain("katex-display");
+  expect(result).toContain(
+    katexLib.renderToString("x^2", { displayMode: true }),
+  );
 });
