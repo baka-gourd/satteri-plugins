@@ -1,5 +1,11 @@
 # @nullpinter/satteri-katex
 
+## 0.2.0
+
+### Minor Changes
+
+- c7b952f: Render KaTeX as HTML nodes in Markdown and MDX without reparsing formula text as Markdown or requiring the rawHtml feature. Require Satteri ^0.10.3 for HTML fragment parsing and normalize namespace attributes produced by its HTML parser.
+
 ## 0.1.4
 
 ### Patch Changes
