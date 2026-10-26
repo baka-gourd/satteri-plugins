@@ -111,7 +111,7 @@ test("escapes manual error markup", async () => {
 
     expect(result).toContain('class="katex-error"');
     expect(result).toContain('style="color:&quot;red&quot;&amp;"');
-    expect(result).toContain('title="Error: &quot;broken&quot; &lt;math&gt;"');
+    expect(result).toContain('title="Error: &quot;broken&quot; <math>"');
     expect(result).toContain('&lt;script&gt;&amp;"');
     expect(result).not.toContain("<script>");
   } finally {

@@ -45,9 +45,9 @@
   "devDependencies": {
     "@kitajs/html": "^4.2.13",
     "@types/katex": "^0.16.8",
-    "satteri": "^0.10.0"
+    "satteri": "^0.10.3"
   },
   "peerDependencies": {
-    "satteri": "^0.10.0"
+    "satteri": "^0.10.3"
   }
 }

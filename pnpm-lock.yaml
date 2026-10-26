@@ -83,8 +83,8 @@ importers:
         specifier: ^0.16.8
         version: 0.16.8
       satteri:
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.10.3
+        version: 0.10.3
 
   packages/satteri-sectionize:
     devDependencies:

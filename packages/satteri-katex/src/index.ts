@@ -1,5 +1,12 @@
 import katexLib, { type KatexOptions as BaseKatexOptions } from "katex";
-import { defineMdastPlugin, type MdastNode, type MdastPluginDefinition } from "satteri";
+import {
+  defineMdastPlugin,
+  htmlToHast,
+  type Custom,
+  type HastNode,
+  type MdastNode,
+  type MdastPluginDefinition,
+} from "satteri";
 
 export type KatexOptions = Omit<BaseKatexOptions, "displayMode" | "throwOnError">;
 
@@ -68,22 +75,54 @@ function renderMath(
   }
 }
 
+function normalizeNamespace(node: HastNode): void {
+  // Satteri 0.10 prefixes default namespace declarations with a colon.
+  if (node.type === "element" && ":xmlns" in node.properties) {
+    node.properties = Object.fromEntries(
+      Object.entries(node.properties).map(([key, value]) => [
+        key === ":xmlns" ? "xmlns" : key,
+        value,
+      ]),
+    );
+  }
+
+  // Preserve the HTML parser's text nodes and all other attributes unchanged.
+  if ("children" in node) {
+    node.children.forEach(normalizeNamespace);
+  }
+}
+
+function mathNode(html: string): Custom {
+  // Parse HTML directly so Markdown syntax in formulas remains literal text.
+  const root = htmlToHast(html, { fragment: true });
+  const element = root.type === "root" ? root.children[0] : undefined;
+  if (element?.type !== "element") {
+    throw new Error("Expected KaTeX to render an HTML element");
+  }
+  normalizeNamespace(element);
+
+  // Pass HAST through the custom node without adding a paragraph or wrapper.
+  return {
+    type: "katex",
+    data: {
+      hName: element.tagName,
+      hProperties: element.properties,
+      hChildren: element.children,
+    },
+    children: [],
+  };
+}
+
 export function katex(options?: Readonly<KatexOptions>): MdastPluginDefinition {
   const settings = options ?? emptyOptions;
 
   return defineMdastPlugin({
     name: "katex",
     math(node, ctx) {
-      return {
-        raw: renderMath(node, true, settings, ctx),
-        mdxExpressions: false,
-      };
+      ctx.replaceNode(node, mathNode(renderMath(node, true, settings, ctx)));
     },
     inlineMath(node, ctx) {
-      return {
-        raw: renderMath(node, false, settings, ctx),
-        mdxExpressions: false,
-      };
+      ctx.replaceNode(node, mathNode(renderMath(node, false, settings, ctx)));
     },
   });
 }
