@@ -16,8 +16,8 @@ const result = await markdownToHtml(markdown, {
 The plugin mirrors `remark-sectionize`: headings are wrapped together with the
 following sibling nodes until the next heading at the same or a higher level.
 
-It requires Satteri 0.10.0. The implementation uses the parent and sibling index
-APIs introduced in Satteri 0.9.0 and custom nodes introduced in Satteri 0.10.0.
+It requires Satteri ^0.11.5. The implementation uses the parent and sibling index
+APIs, custom nodes, and `ctx.setField` to update section children.
 
 ## Options
 

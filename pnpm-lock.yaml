@@ -24,8 +24,8 @@ importers:
         specifier: ^7.0.2001
         version: 7.0.2001
       satteri:
-        specifier: ^0.10.3
-        version: 0.10.3
+        specifier: ^0.11.5
+        version: 0.11.5
       tsdown:
         specifier: ^0.22.14
         version: 0.22.14(typescript@7.0.2)
@@ -39,8 +39,8 @@ importers:
   packages/satteri-admonitions-to-directives:
     devDependencies:
       satteri:
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.11.5
+        version: 0.11.5
 
   packages/satteri-extended-table:
     dependencies:
@@ -67,8 +67,8 @@ importers:
         version: 2.1.1
     devDependencies:
       satteri:
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.11.5
+        version: 0.11.5
 
   packages/satteri-katex:
     dependencies:
@@ -83,112 +83,73 @@ importers:
         specifier: ^0.16.8
         version: 0.16.8
       satteri:
-        specifier: ^0.10.3
-        version: 0.10.3
+        specifier: ^0.11.5
+        version: 0.11.5
 
   packages/satteri-sectionize:
     devDependencies:
       satteri:
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.11.5
+        version: 0.11.5
 
 packages:
 
-  '@bruits/satteri-darwin-arm64@0.10.0':
-    resolution: {integrity: sha512-wayv83U4OKiLba8Yq1prRL+SdmqC1wK0ASfu+HDX1aeLrTStBBXazNqO2DSIOGYGTIR7ZsyYQcdmbl0/AOW0ww==}
+  '@bruits/satteri-android-arm64@0.11.5':
+    resolution: {integrity: sha512-v8KuF6uzEv45l+9dJE56sLPzjd5XNqDjKjdxRqa4PLYieSpTyt2aUcM/C2r9q1W/b1MEBEFZ27fByE914f/+Aw==}
+    cpu: [arm64]
+    os: [android]
+
+  '@bruits/satteri-darwin-arm64@0.11.5':
+    resolution: {integrity: sha512-GylekKylApgWPKcfh9A7qFkb2iEZAK088TFet2YbDiaHHBeRlcCIXHoC1bpLlpx63E6fAg03vVzgDM+b51tLng==}
     cpu: [arm64]
     os: [darwin]
 
-  '@bruits/satteri-darwin-arm64@0.10.3':
-    resolution: {integrity: sha512-RBPx54YSt6ly9ozJ4AbgY6ITep3uJAaPE0ErxhQnE9Mk5ldGeQYbq4bWiJyZOoQmqC45cMCZmFyPjQdJT4biEw==}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@bruits/satteri-darwin-x64@0.10.0':
-    resolution: {integrity: sha512-XC/hUrl6bPV+/+MCn1WVegHoeoJwKwOVLwfWcfbaQOb2TAal6+CVpXrPk7KegMQzgGImtOiYYn1UuxVgD21vNw==}
+  '@bruits/satteri-darwin-x64@0.11.5':
+    resolution: {integrity: sha512-qwYjVP+/d37kUo2CCtm8NYxfEZvaUdQ5qI9AmMh2D1Z4IpP/a2SIQNpPh1Ty2hRsoPLFPg3e2f1l3aXyrfX2Rg==}
     cpu: [x64]
     os: [darwin]
 
-  '@bruits/satteri-darwin-x64@0.10.3':
-    resolution: {integrity: sha512-l0G6eARLHwlFEc7KOzEr0Z7YVEUzAQVSDZcevGOng0ycFvY+Eg7SNpNAc5/k0XXKEM+Q62A8wUaaL+d0W63x7g==}
+  '@bruits/satteri-freebsd-x64@0.11.5':
+    resolution: {integrity: sha512-sU3XvuN9vjMA18bUs6Rdh5jQPwopyOxO9th/1AfiAk7PfpHWnDeEpG3M7NwIflJxD6a4GXqGSpMrz69DQEVNGg==}
     cpu: [x64]
-    os: [darwin]
+    os: [freebsd]
 
-  '@bruits/satteri-linux-arm64-gnu@0.10.0':
-    resolution: {integrity: sha512-jYHI7/cAuYmt0GMQG5KpBtSvXz1EJtiotBf9rTFbHZ8A4Lgy7c2AmF9lhsu6Kle4hEvv+smzaY05Yy5LnNEP5A==}
+  '@bruits/satteri-linux-arm64-gnu@0.11.5':
+    resolution: {integrity: sha512-OJR3Hw2x0/Zuf3Y2dxTcimXtD/ILNX9++oUN6tIJPW5JB+zgrJc79B8p1iGUY8LLOLSSjVfafPMNVrpJvvzhgQ==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@bruits/satteri-linux-arm64-gnu@0.10.3':
-    resolution: {integrity: sha512-U6Lv74zONfwnKbzPAylqp45isfUVJNQPnROlX1mWJ7TLCkJRKeYEFyNe5auZEynVY0ZrgyFe7mKE04dmsFqEhw==}
-    cpu: [arm64]
-    os: [linux]
-    libc: [glibc]
-
-  '@bruits/satteri-linux-arm64-musl@0.10.0':
-    resolution: {integrity: sha512-UMtcV0FMu9nodG2PCDnol1uAiYTTJsKVvkxl5YogjWSiLKl3SUIW24CtIzeQlGNbPbv1vayXXLaQ2f+eOQAW5A==}
+  '@bruits/satteri-linux-arm64-musl@0.11.5':
+    resolution: {integrity: sha512-SDPmCil2ckUHalZfxQSicCTYIPRc5EM1nxeG6rWP/9caNXWRWuKIyQk6srDODl/y2i5606bDpgdD/Zm20hucUA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@bruits/satteri-linux-arm64-musl@0.10.3':
-    resolution: {integrity: sha512-m/dsv+OsXuQMc0Mmkz1KAO0U/TbY+qe4puyhf08ce7EW5I+czxa5n5Vpy6ZTYwFvA3TtrokwiBRDApzz+oPeww==}
-    cpu: [arm64]
-    os: [linux]
-    libc: [musl]
-
-  '@bruits/satteri-linux-x64-gnu@0.10.0':
-    resolution: {integrity: sha512-QKmo6l/FoWopFgGCNVz3nw3xpWwcWcebLf4pilat4WOBVa6KADsyYC4QGwn1lEl27xvgERgK11MKHtUu7ffFNw==}
+  '@bruits/satteri-linux-x64-gnu@0.11.5':
+    resolution: {integrity: sha512-noaF5e7yoDNHgF07uD4MbzaRJpegfO8gWxiILiyzjwdIeVS4WGNY9my4szMUpWnSy160bYcL3whIIJXxNU2lFQ==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@bruits/satteri-linux-x64-gnu@0.10.3':
-    resolution: {integrity: sha512-Y+YYrs3U+UhxRf3vn9Fgjo3NtjnqYBsAEpTrZcwfKpaiSXKpQlr4v2H9Lp4jtlC4PNjPr02wkiNtiAgNlhkB8w==}
-    cpu: [x64]
-    os: [linux]
-    libc: [glibc]
-
-  '@bruits/satteri-linux-x64-musl@0.10.0':
-    resolution: {integrity: sha512-8Zulqr6Ly228F1Ob+u30y8DV0YRfOKBpD2yn7J/zhrNsB62y9x08++bA9FWbN3W/PNUxBg+phMaCsDEqqZDh9Q==}
+  '@bruits/satteri-linux-x64-musl@0.11.5':
+    resolution: {integrity: sha512-EaJJwmXoTYu0bH01sJpbEbJwwpFJs5I1Fxy5zHle42KNwu2aN2o/2+LK4V4UdB7r9Hu+Llygr1n3XBOydAIA1A==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@bruits/satteri-linux-x64-musl@0.10.3':
-    resolution: {integrity: sha512-Fqg47592hkRebzI5EMU9BYnbFz7m/Q4awJt062xr9lweaHTmlN6ij/Z9Dzyt4THsqRFm87DZFMcwrniQpeEbPA==}
-    cpu: [x64]
-    os: [linux]
-    libc: [musl]
-
-  '@bruits/satteri-wasm32-wasi@0.10.0':
-    resolution: {integrity: sha512-XnpYHnAab+qJVdznQyVdnzW882uUQhh6EqihhvQgn/mULBYz8qiQaEpqEilqPvk4aAhg2un2P9H+cmWdV+y88A==}
+  '@bruits/satteri-wasm32-wasi@0.11.5':
+    resolution: {integrity: sha512-KmkQRxj2XbhXlDcnbYrEknyBvbvs6CLx6VUGyl4XbdeULw54ioA5cwySCytRTVS27djhb8XAB3w50+IcXR3kAA==}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
 
-  '@bruits/satteri-wasm32-wasi@0.10.3':
-    resolution: {integrity: sha512-OHBxAJMt97QNQJ8JbtdzdH54dWV7OT0pxl1wGZyD4vRDUeJjm5CXgeC/t1VJzD9tQiwPCVY3/Hh/88SJpVOj7g==}
-    engines: {node: '>=14.0.0'}
-    cpu: [wasm32]
-
-  '@bruits/satteri-win32-arm64-msvc@0.10.0':
-    resolution: {integrity: sha512-wANIBWlIGrHT84kgjkgnOX4eDXV5zVN0vZ27DEEuC6hw+7h8jvHXD605+MoehQgQBldWWjnJwDQTaN3LL95SoA==}
+  '@bruits/satteri-win32-arm64-msvc@0.11.5':
+    resolution: {integrity: sha512-cQSNnuQ4PyvDGXCice16CkbE/20jfyH/I/CDUbBooWZut6kStyK0vphQFBBOckpWzI9/T7hUqa4gGsxwZA2Eeg==}
     cpu: [arm64]
     os: [win32]
 
-  '@bruits/satteri-win32-arm64-msvc@0.10.3':
-    resolution: {integrity: sha512-4+fLJgFthvZQHdpb1nVXQXH1T6spXs5fYj71KTvTOhsSZ3jA1VkvneVtv7VinX7vgtMu6PZGm/X3P84ancCMkA==}
-    cpu: [arm64]
-    os: [win32]
-
-  '@bruits/satteri-win32-x64-msvc@0.10.0':
-    resolution: {integrity: sha512-I7Fan1nUPJlZtWNIwUM6w9MLzDGRherSfiG/TioajwjShGBZSyew2Q/rFCO/R8rAN/ntHSkOnY3uSQLjJINFzQ==}
-    cpu: [x64]
-    os: [win32]
-
-  '@bruits/satteri-win32-x64-msvc@0.10.3':
-    resolution: {integrity: sha512-BdbaBcnKktrNbAGibVnZFIZKtl+xl3TKvgLDNZempM0d2C+2l9OU874AqdhkOkegWk/vdCS1Z+wUD6W5KYUT9w==}
+  '@bruits/satteri-win32-x64-msvc@0.11.5':
+    resolution: {integrity: sha512-aM3zoJtcHMYAVXdZLVJBXrsFwpxFmuxS+4VEquisdXuYt8bXRss08eEbLa0pgzE3ISqUCBkyh3GWIJD6lUVIYQ==}
     cpu: [x64]
     os: [win32]
 
@@ -289,12 +250,12 @@ packages:
     resolution: {integrity: sha512-6QEf6yqFbETdwGITKq57aYoPfX/3K8XFNwsAlx0C1M7o8cb79sv1M3w+tWuWvIcSbNqrLF7OD7YpZMVVz335hQ==}
     engines: {node: '>=20.0.0'}
 
-  '@napi-rs/wasm-runtime@1.2.3':
-    resolution: {integrity: sha512-UMduMbqO5s5zF2NkNacMT/yK5Y5QiKvWr2+50bzIIxFDwVJ2h49b+oyjaCGPhJxd2/gC2x39EHv/gHVuu36x2Q==}
+  '@napi-rs/wasm-runtime@1.2.6':
+    resolution: {integrity: sha512-mRyDmEw9/fCDXCGfL1sbgIw/GUK0PVxRW4YwgPN61F3LQ+fSyoBFarJVzgGyhF6kRzEQZ0FejDqm4WLXSeqQmw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=23.5.0}
     peerDependencies:
-      '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.4
-      '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.4
+      '@emnapi/core': ^1.7.1 || 2.0.0-beta.2
+      '@emnapi/runtime': ^1.7.1 || 2.0.0-beta.2
 
   '@oxc-project/types@0.144.0':
     resolution: {integrity: sha512-nuhZIOLuI6TFQ32I/WnUx+SCPY7SdSKwgnFHydAuoS1+Z4BRcaP+RRJmGzl9lw+0OFF7UmaESf7KQRXaNLHypg==}
@@ -868,133 +829,157 @@ packages:
     resolution: {integrity: sha512-C/0zV5IhgVdYhGJTwrY0v8dknxlhiKwtVJkMUaexu9/QvRmzlV4vfU3hZlUSgqc2BxQHntL1mCVbDq8j0FRFDw==}
     cpu: [arm64]
     os: [android]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-arm64@0.8.7':
     resolution: {integrity: sha512-/u+REDMI4a0/lsJXTM4c53/w31OGZLOReZIyg62uhgLs0kc8NHsj/nOcxTdlQjq5gi0zhdkccD9LaLTXcdzPvw==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-x64@0.8.7':
     resolution: {integrity: sha512-sMMzFOwCo4WXR+/6zIBThOocSC50iIIZZdfiIDbaLvj0Ax/rWt/iavyfEAqajyvzydLyCqR/ZItdLWSRlu1umw==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-freebsd-x64@0.8.7':
     resolution: {integrity: sha512-MpdpKXix9P+Y1rKgjvcNeNtGjXeL1CmttNhYINrWls8kRpm4xM/oBGTmn6w7to8lAlwj5jm8q03dQPl5mRv4Qw==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-gnu@0.8.7':
     resolution: {integrity: sha512-rr1srFLlPAmC1vtxfc9C1YLDe3iH09YjfSeeIidBqKhzx1MATjOAq4mjlRUOnhr/L27MotWIYOFKwVsd5JZFOg==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-musl@0.8.7':
     resolution: {integrity: sha512-eAufXh8qBRpiSO6ueaMDL+yyoXIGLhpUce72YbcACtZU2qhExwBIJyEtQf5kH2Ki0X2aqkSjSfog4OPtKXan3Q==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-gnu@0.8.7':
     resolution: {integrity: sha512-gw4w6wPoHObBrdIC4duVWLmJOvpdE25j5D7yrM5mACNlK4klRz/lv8hK+ssQk9EJHBgZjSaqZIJVFgqNYbfv7A==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-musl@0.8.7':
     resolution: {integrity: sha512-L68N6Y4XkqcIaKo3Ra88JEvBEH4AHff44A4INcrxeVWZ8CZtu2tCpfVxe3hR8qQQMcvBSQlDn24KpkCKEhVvfA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-gnu@0.8.7':
     resolution: {integrity: sha512-dzyAbltJmf3Cqlb8HcFuYIf5Yn0fl1vTr3XJ9HiVNNvOlhqPSArOqtw9vI1p6/VTXTjrMLXlU+s+/kNHiIy/Cw==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-musl@0.8.7':
     resolution: {integrity: sha512-Otw4MH3404q0Bbvl+YTdW9aoUV5vXmUw8260bWvt1XlaoIX/ceSgI4ygheRDMfBPoHt6FDayQaO9OLVUZAgkFA==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-arm64@0.8.7':
     resolution: {integrity: sha512-qo/jyrzryiBuKEsFiuWaBCBe3tRMynQ0qFWFgOEjcCMQeZfBm+wKiVEUEFXXLc7bh8YezguAWp0Mtnhq4ARNyA==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-x64@0.8.7':
     resolution: {integrity: sha512-D5lDsVDx6m00E6bWySlWdH72Ca4TPSaphDqB6QjU6MpuNLIJqoGoatYyq2rOmBE8Zv/kunot/o58KGL03P3eiA==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-parser/binding-android-arm64@0.8.7':
     resolution: {integrity: sha512-eGKYiUDX7Y0V7tDTmg+JTVnXnjMqfXXsorZ+EDf5kxwchQ3Or1HS14MzI2fw+jFhHR85fCWt+mtX33Yao73hIQ==}
     cpu: [arm64]
     os: [android]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-arm64@0.8.7':
     resolution: {integrity: sha512-Re0RHelKLnjEURulY2/KxW+Ngb8zuNA4BRZuMwgGQNzVumT6u4U2N2hc01oeYVNVof0i7GrXE4UCNBgbpRRnjQ==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-x64@0.8.7':
     resolution: {integrity: sha512-Hn8DROtQkjlA1ACbPgj4a7eP9IuVOI504oiTwpkWPbpaDWD9KdmnVYCqW+1LfenNK/g7O9NhWGpXEdaCNX7lIA==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-freebsd-x64@0.8.7':
     resolution: {integrity: sha512-bAP2OV8wRuzplX/jYxv9+vvqQT8JxyNphI8fLfXGL054Xs+4/J5u33cIm3y4rxY8rdoLmmdiJs2Tq7r7lrDRfA==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-gnu@0.8.7':
     resolution: {integrity: sha512-kTYwJQQgmZeAWdDIWabiReIZMpmfLueIj1tCmjStUtFGhR1Z0qwxonKVfUC4N7h/VhGGzLZ//7O1kgt1QKqgCg==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-musl@0.8.7':
     resolution: {integrity: sha512-uL4jE8HPT2BLlxAXyD10LqgPuXa9eDa0BKpCdSANmzIJghq/2eZo3/gQNtaxPZMupWoxjYzSad9IXrwu7aYPXQ==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-gnu@0.8.7':
     resolution: {integrity: sha512-3gVN4pWSKZmXiNX7cU164dR9MPvesCHnlH6nPfpK+yQsCuYphjKKplcb4SnZBrhiqmXbgb2HR0c2TS0IZUPhgA==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-musl@0.8.7':
     resolution: {integrity: sha512-S0mwfEjoLpxzXeZw802Wa4RaELsQiPtWqG6INcy8j4GtvNFtl4LCX3eGO1XLn9pyLAISLzTRyU3zUCBUPin8lg==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-gnu@0.8.7':
     resolution: {integrity: sha512-lnbWdPmerE5D1uH1G4IEZKnPzCrWCStRGrtgpSIe1RibAo5bZIjDbbbPYXmMHCEh4F+x/JaJpElh26a3r+BPbg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-musl@0.8.7':
     resolution: {integrity: sha512-769uwndMvMzUvATWbAcEvyLHKA+DzhHSCl/obBUrRdYfRo26yxui6S8y3z7uJ+Naup7UKrDxrpK7OnQkxkl9KQ==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-arm64@0.8.7':
     resolution: {integrity: sha512-mEB/9PlaAkisJ6KWGz0zvywXoU6+80dTlR2LwS7s/jcXXoU6fm2+sitBZXtqu3+Q4DcDgPxM45uWMCzPs0TSRw==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-x64@0.8.7':
     resolution: {integrity: sha512-8vNB2DP0ou61nGb8tc/qfi41gfyDXz1MHr2zqL3nR+cJ6CEbiuWV/l/a/vv151gCgiZLLAyGkQGENpozdg716w==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-toolchain/types@0.8.7':
     resolution: {integrity: sha512-2Z53dNxAJL6UvFoIrDZvYf3zlO8s4VJK4O2hhaB4mXVwwpX/7ajtss3cmfqKvamlNLWyt9FSWs4eoYdlbxpnHA==}
@@ -1422,11 +1407,8 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  satteri@0.10.0:
-    resolution: {integrity: sha512-sEAUEqnRlPuVQlJ+ZII+iTbkeoZw5QHdK+LTvkFggVTTGrKrSrETtxXU+QkUTrLchKscByP9a6Ihy3C1IXsUNQ==}
-
-  satteri@0.10.3:
-    resolution: {integrity: sha512-LBDONBUtj48XanFpLcCDvyCjBruz5aj5MGwE9gR+/RTB3monyglmh9jpGXuYUDO4rvBhvK2bpbjTKeU9kkHtfg==}
+  satteri@0.11.5:
+    resolution: {integrity: sha512-xUpExI1vgyXqKHez0xO3q7exUmgNaD+CHHa1hAbD5/PJZnHeMc6aVhxwVfzJgvGkYs/YiFOVVG4i7AT+CYRjLA==}
 
   semver@7.8.5:
     resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
@@ -1669,66 +1651,41 @@ packages:
 
 snapshots:
 
-  '@bruits/satteri-darwin-arm64@0.10.0':
+  '@bruits/satteri-android-arm64@0.11.5':
     optional: true
 
-  '@bruits/satteri-darwin-arm64@0.10.3':
+  '@bruits/satteri-darwin-arm64@0.11.5':
     optional: true
 
-  '@bruits/satteri-darwin-x64@0.10.0':
+  '@bruits/satteri-darwin-x64@0.11.5':
     optional: true
 
-  '@bruits/satteri-darwin-x64@0.10.3':
+  '@bruits/satteri-freebsd-x64@0.11.5':
     optional: true
 
-  '@bruits/satteri-linux-arm64-gnu@0.10.0':
+  '@bruits/satteri-linux-arm64-gnu@0.11.5':
     optional: true
 
-  '@bruits/satteri-linux-arm64-gnu@0.10.3':
+  '@bruits/satteri-linux-arm64-musl@0.11.5':
     optional: true
 
-  '@bruits/satteri-linux-arm64-musl@0.10.0':
+  '@bruits/satteri-linux-x64-gnu@0.11.5':
     optional: true
 
-  '@bruits/satteri-linux-arm64-musl@0.10.3':
+  '@bruits/satteri-linux-x64-musl@0.11.5':
     optional: true
 
-  '@bruits/satteri-linux-x64-gnu@0.10.0':
-    optional: true
-
-  '@bruits/satteri-linux-x64-gnu@0.10.3':
-    optional: true
-
-  '@bruits/satteri-linux-x64-musl@0.10.0':
-    optional: true
-
-  '@bruits/satteri-linux-x64-musl@0.10.3':
-    optional: true
-
-  '@bruits/satteri-wasm32-wasi@0.10.0':
+  '@bruits/satteri-wasm32-wasi@0.11.5':
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
-      '@napi-rs/wasm-runtime': 1.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
+      '@napi-rs/wasm-runtime': 1.2.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
     optional: true
 
-  '@bruits/satteri-wasm32-wasi@0.10.3':
-    dependencies:
-      '@emnapi/core': 1.11.1
-      '@emnapi/runtime': 1.11.1
-      '@napi-rs/wasm-runtime': 1.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
+  '@bruits/satteri-win32-arm64-msvc@0.11.5':
     optional: true
 
-  '@bruits/satteri-win32-arm64-msvc@0.10.0':
-    optional: true
-
-  '@bruits/satteri-win32-arm64-msvc@0.10.3':
-    optional: true
-
-  '@bruits/satteri-win32-x64-msvc@0.10.0':
-    optional: true
-
-  '@bruits/satteri-win32-x64-msvc@0.10.3':
+  '@bruits/satteri-win32-x64-msvc@0.11.5':
     optional: true
 
   '@changesets/apply-release-plan@8.0.0':
@@ -1884,7 +1841,7 @@ snapshots:
       tinyglobby: 0.2.17
       yaml: 2.9.0
 
-  '@napi-rs/wasm-runtime@1.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
+  '@napi-rs/wasm-runtime@1.2.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
@@ -2810,39 +2767,24 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.4
       '@rolldown/binding-win32-x64-msvc': 1.2.4
 
-  satteri@0.10.0:
+  satteri@0.11.5:
     dependencies:
       '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.5
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
     optionalDependencies:
-      '@bruits/satteri-darwin-arm64': 0.10.0
-      '@bruits/satteri-darwin-x64': 0.10.0
-      '@bruits/satteri-linux-arm64-gnu': 0.10.0
-      '@bruits/satteri-linux-arm64-musl': 0.10.0
-      '@bruits/satteri-linux-x64-gnu': 0.10.0
-      '@bruits/satteri-linux-x64-musl': 0.10.0
-      '@bruits/satteri-wasm32-wasi': 0.10.0
-      '@bruits/satteri-win32-arm64-msvc': 0.10.0
-      '@bruits/satteri-win32-x64-msvc': 0.10.0
-
-  satteri@0.10.3:
-    dependencies:
-      '@types/estree-jsx': 1.0.5
-      '@types/hast': 3.0.5
-      '@types/mdast': 4.0.4
-      '@types/unist': 3.0.3
-    optionalDependencies:
-      '@bruits/satteri-darwin-arm64': 0.10.3
-      '@bruits/satteri-darwin-x64': 0.10.3
-      '@bruits/satteri-linux-arm64-gnu': 0.10.3
-      '@bruits/satteri-linux-arm64-musl': 0.10.3
-      '@bruits/satteri-linux-x64-gnu': 0.10.3
-      '@bruits/satteri-linux-x64-musl': 0.10.3
-      '@bruits/satteri-wasm32-wasi': 0.10.3
-      '@bruits/satteri-win32-arm64-msvc': 0.10.3
-      '@bruits/satteri-win32-x64-msvc': 0.10.3
+      '@bruits/satteri-android-arm64': 0.11.5
+      '@bruits/satteri-darwin-arm64': 0.11.5
+      '@bruits/satteri-darwin-x64': 0.11.5
+      '@bruits/satteri-freebsd-x64': 0.11.5
+      '@bruits/satteri-linux-arm64-gnu': 0.11.5
+      '@bruits/satteri-linux-arm64-musl': 0.11.5
+      '@bruits/satteri-linux-x64-gnu': 0.11.5
+      '@bruits/satteri-linux-x64-musl': 0.11.5
+      '@bruits/satteri-wasm32-wasi': 0.11.5
+      '@bruits/satteri-win32-arm64-msvc': 0.11.5
+      '@bruits/satteri-win32-x64-msvc': 0.11.5
 
   semver@7.8.5: {}
 

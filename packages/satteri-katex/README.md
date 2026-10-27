@@ -2,7 +2,7 @@
 
 Satteri plugin scaffold for KaTeX support.
 
-Requires Satteri ^0.10.3. Supports Markdown and MDX without enabling `rawHtml`.
+Requires Satteri ^0.11.5. Supports Markdown and MDX without enabling `rawHtml`.
 
 ## Install
 

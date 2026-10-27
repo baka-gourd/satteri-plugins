@@ -47,9 +47,9 @@
     "micromark-extension-gfm-table": "^2.1.1"
   },
   "devDependencies": {
-    "satteri": "^0.10.0"
+    "satteri": "^0.11.5"
   },
   "peerDependencies": {
-    "satteri": "^0.10.0"
+    "satteri": "^0.11.5"
   }
 }

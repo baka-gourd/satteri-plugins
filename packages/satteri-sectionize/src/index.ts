@@ -122,7 +122,7 @@ export function sectionize(options: SectionizeOptions = {}): MdastPluginDefiniti
       }
 
       processedParents.add(parent);
-      ctx.setProperty(parent, "children", sectionizeChildren(parent.children, maxDepth));
+      ctx.setField(parent, "children", sectionizeChildren(parent.children, maxDepth));
     },
   });
 }

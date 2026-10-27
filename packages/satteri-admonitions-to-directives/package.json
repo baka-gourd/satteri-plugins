@@ -38,9 +38,9 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "satteri": "^0.10.0"
+    "satteri": "^0.11.5"
   },
   "peerDependencies": {
-    "satteri": "^0.10.0"
+    "satteri": "^0.11.5"
   }
 }

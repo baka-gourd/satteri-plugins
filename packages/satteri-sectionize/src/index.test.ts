@@ -130,7 +130,7 @@ test("preserves node identity for later plugins", async () => {
     name: "rewrite-text",
     text(node, ctx) {
       if (node.value === "Before") {
-        ctx.setProperty(node, "value", "After");
+        ctx.setField(node, "value", "After");
       }
     },
   });

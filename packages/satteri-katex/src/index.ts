@@ -3,7 +3,6 @@ import {
   defineMdastPlugin,
   htmlToHast,
   type Custom,
-  type HastNode,
   type MdastNode,
   type MdastPluginDefinition,
 } from "satteri";
@@ -75,23 +74,6 @@ function renderMath(
   }
 }
 
-function normalizeNamespace(node: HastNode): void {
-  // Satteri 0.10 prefixes default namespace declarations with a colon.
-  if (node.type === "element" && ":xmlns" in node.properties) {
-    node.properties = Object.fromEntries(
-      Object.entries(node.properties).map(([key, value]) => [
-        key === ":xmlns" ? "xmlns" : key,
-        value,
-      ]),
-    );
-  }
-
-  // Preserve the HTML parser's text nodes and all other attributes unchanged.
-  if ("children" in node) {
-    node.children.forEach(normalizeNamespace);
-  }
-}
-
 function mathNode(html: string): Custom {
   // Parse HTML directly so Markdown syntax in formulas remains literal text.
   const root = htmlToHast(html, { fragment: true });
@@ -99,7 +81,6 @@ function mathNode(html: string): Custom {
   if (element?.type !== "element") {
     throw new Error("Expected KaTeX to render an HTML element");
   }
-  normalizeNamespace(element);
 
   // Pass HAST through the custom node without adding a paragraph or wrapper.
   return {
