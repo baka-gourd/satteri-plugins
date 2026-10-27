@@ -13,8 +13,6 @@ Temporary workspace for Satteri plugin packages.
 > [!WARNING]
 > Satteri is still in early development, and the plugin API is not stable.
 >
-> Urrently, sectionize will cause footnotes generation failed.
-> katex not works fine in MDX, wait satteri update to fix it.
 
 ## Development
 
